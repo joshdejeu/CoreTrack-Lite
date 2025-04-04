@@ -11,7 +11,7 @@
 
 <body class="d-flex align-items-center justify-content-center">
 
-    <div class="container d-flex flex-column justify-content-center w-50 w-sm-75 w-md-50 w-lg-35">
+    <div class="container d-flex flex-column justify-content-center w-50 w-sm-100 w-md-50 w-lg-35">
         <form id="user-form"
             class="d-flex flex-column justify-content-center align-items-center w-100 p-4 border rounded shadow">
 
