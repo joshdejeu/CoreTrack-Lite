@@ -1,8 +1,11 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=coretrack";
-$dbusername = "root";
-$dbpassword = "";
+$host = getenv("DATABASE_HOST");
+$dbname = getenv("DATABASE_NAME");
+
+$dsn = "mysql:host=$host;dbname=$dbname";
+$dbusername = getenv("DATABASE_USER");
+$dbpassword = getenv("DATABASE_PASSWORD");
 
 // mysqli - mysql db
 // pdo - sqllite
