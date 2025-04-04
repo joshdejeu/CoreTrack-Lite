@@ -1,7 +1,7 @@
 <?php
 $url = parse_url(getenv("JAWSDB_URL"));
 $host = $url["host"];
-$dbname=substr($url["path"],1);
+$dbname = substr($url["path"], 1);
 $username = $url["user"];
 $password = $url["pass"];
 // $dbusername = getenv("DATABASE_USER");
@@ -10,7 +10,7 @@ $password = $url["pass"];
 // mysqli - mysql db
 // pdo - sqllite
 try {
-    $pdo = new PDO($dsn, $username, $password); // attempt db connection
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password); // attempt db connection
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // if error, throw exception
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
