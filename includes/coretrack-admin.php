@@ -68,14 +68,7 @@ try {
         <div class="row">
             <div class="col-12">
                 <p class="fs-5">Manage your core returns here.</p>
-                <!-- Success/Error Feedback -->
-                <?php
-                if (isset($_GET["success"])) {
-                    echo '<div class="alert alert-success">' . htmlspecialchars($_GET["success"]) . '</div>';
-                } elseif (isset($_GET["error"])) {
-                    echo '<div class="alert alert-danger">' . htmlspecialchars($_GET["error"]) . '</div>';
-                }
-                ?>
+
                 <!-- Core Returns Table -->
                 <div class="table-responsive">
                     <table class="table table-dark table-striped table-hover">
@@ -90,7 +83,6 @@ try {
                         </thead>
                         <tbody>
                             <?php
-                            // Assume $returns is fetched like: SELECT * FROM core_returns WHERE dealer_code = $_SESSION["dealer_code"]
                             foreach ($returns as $return) {
                                 ?>
                                 <tr>
